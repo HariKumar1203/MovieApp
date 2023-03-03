@@ -148,12 +148,24 @@ class Home extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
     }
+    const settingsSmall = {
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    }
     return (
-      <Slider {...settings} className="slider">
-        {originalList.map(each => (
-          <MoviesSlider key={each.id} details={each} />
-        ))}
-      </Slider>
+      <>
+        <Slider {...settingsSmall} className="slider-small">
+          {originalList.map(each => (
+            <MoviesSlider key={each.id} details={each} />
+          ))}
+        </Slider>
+        <Slider {...settings} className="slider">
+          {originalList.map(each => (
+            <MoviesSlider key={each.id} details={each} />
+          ))}
+        </Slider>
+      </>
     )
   }
 

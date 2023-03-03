@@ -143,7 +143,7 @@ class movieItemDetails extends Component {
         <div className="movie-body-container">
           <div className="filter-container">
             <div className="container">
-              <h1 className="movie-body-heading">Genres</h1>
+              <h1 className="movie-body-heading">genres</h1>
               <ul className="genre-list">
                 {moviesList.movieDetails.genres.map(each => (
                   <li className="list-genres" key={each.id}>

@@ -27,7 +27,7 @@ class Popular extends Component {
   searchData = async search => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://apis.ccbp.in/movies-app/movies-search?search=${search}`
+    const url = `https://apis.ccbp.in/movies-app/movies-search?search=${search.toLowerCase()}`
     const options = {
       headers: {
         authorization: `Bearer ${jwtToken}`,
@@ -42,7 +42,7 @@ class Popular extends Component {
         backdropPath: each.backdrop_path,
         posterPath: each.poster_path,
         id: each.id,
-        title: each.title,
+        title: each.title.toLowerCase(),
       }))
       this.setState({
         searchList: newList,
@@ -58,11 +58,11 @@ class Popular extends Component {
     const {searchList, inputValue} = this.state
     return (
       <>
-        {searchList.length === 0 ? (
+        {searchList.length < 1 ? (
           <div className="no-search-found-container">
             <img
               src="https://res.cloudinary.com/dtcwz5jv9/image/upload/v1677836153/Layer_2noResult_xccadp.png"
-              alt="no results"
+              alt="no movies"
               className="no-results-image"
             />
             <p className="search-result-para">
@@ -70,7 +70,7 @@ class Popular extends Component {
             </p>
           </div>
         ) : (
-          <ul className="popular-body">
+          <ul className="search-body">
             {searchList.map(each => (
               <li className="list-images" key={each.id}>
                 <Link

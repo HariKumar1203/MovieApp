@@ -92,7 +92,7 @@ class Login extends Component {
                 value={password}
                 onChange={this.updatePassword}
               />
-              <p className="error">{isError && `* ${errorMsg}`}</p>
+              <p className="error">{isError && `${errorMsg}`}</p>
               <div>
                 <button className="login-button" type="submit">
                   Login

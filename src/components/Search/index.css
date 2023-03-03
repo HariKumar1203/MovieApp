@@ -8,6 +8,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.search-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
 .no-results-image {
   width: 30%;
 }

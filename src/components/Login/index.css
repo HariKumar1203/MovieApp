@@ -1,13 +1,19 @@
 .login-container {
-  background: linear-gradient(
-      116.64deg,
-      rgba(0, 0, 0, 0.8) 0.46%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/netflixteaser.png');
+  background: #0c0b10;
   min-height: 100vh;
   padding: 20px;
   font-family: Roboto;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .login-container {
+    background: linear-gradient(
+        116.64deg,
+        rgba(0, 0, 0, 0.8) 0.46%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/netflixteaser.png');
+  }
 }
 .company-image {
   width: 150px;
@@ -23,11 +29,10 @@
   align-items: center;
   height: 84vh;
 }
-
 .login-card-container {
   position: absolute;
-  width: 406px;
-  height: 360px;
+  width: 80%;
+  height: 350px;
   background: #0c0b10;
   opacity: 0.8;
   border-radius: 8px;
@@ -36,10 +41,32 @@
   align-items: center;
   padding: 20px;
 }
+
+@media screen and (min-width: 768px) {
+  .login-card-container {
+    /* position: absolute; */
+    width: 406px;
+    height: 360px;
+    background: #0c0b10;
+    opacity: 0.8;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}
 .heading-login {
   color: #ffffff;
-  font-size: 26px;
+  font-size: 40px;
+  margin-right: auto;
 }
+@media screen and (min-width: 768px) {
+  .heading-login {
+    text-align: center;
+  }
+}
+
 .label {
   text-align: left;
   align-self: flex-start;

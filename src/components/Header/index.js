@@ -24,30 +24,30 @@ class Header extends Component {
     const activeHome = homeActive ? 'isActive' : 'inActive'
     const activePopular = popularActive ? 'isActive' : 'inActive'
     return (
-      <nav className="header-container">
-        <ul className="text-container">
-          <li>
-            <Link to="/">
-              <img
-                src="https://res.cloudinary.com/dtcwz5jv9/image/upload/v1677689381/Group_7399logo_elchxl.png"
-                alt="website logo"
-                className="company-logo-image"
-              />
-            </Link>
-          </li>
-          <li className="select-container">
-            <p className={`listItems ${activeHome}`}>
-              <Link to="/" className="link">
-                Home
-              </Link>
-            </p>
-            <p className={`listItems ${activePopular}`}>
-              <Link to="/popular" className="link">
-                Popular
-              </Link>
-            </p>
-          </li>
-        </ul>
+      <div className="header-container">
+        <div className="text-container">
+          <Link to="/">
+            <img
+              src="https://res.cloudinary.com/dtcwz5jv9/image/upload/v1677689381/Group_7399logo_elchxl.png"
+              alt="website logo"
+              className="company-logo-image"
+            />
+          </Link>
+          <ul className="unOrder-list">
+            <li className="select-container">
+              <p className={`listItems ${activeHome}`}>
+                <Link to="/" className="link">
+                  Home
+                </Link>
+              </p>
+              <p className={`listItems ${activePopular}`}>
+                <Link to="/popular" className="link">
+                  Popular
+                </Link>
+              </p>
+            </li>
+          </ul>
+        </div>
         <div className="buttons-container">
           {searchActive ? (
             <div className="input-container">
@@ -82,7 +82,7 @@ class Header extends Component {
             />
           </Link>
         </div>
-      </nav>
+      </div>
     )
   }
 }
