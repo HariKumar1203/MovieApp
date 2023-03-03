@@ -1,0 +1,13 @@
+.search-result-para {
+  color: #ffffff;
+}
+.no-search-found-container {
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-results-image {
+  width: 30%;
+}

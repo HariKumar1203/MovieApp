@@ -1,0 +1,49 @@
+.popular-container {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popular-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  list-style-type: none;
+  padding: 0px;
+}
+.list-images {
+  width: 24%;
+  margin-bottom: 15px;
+}
+.list-movie-image {
+  width: 95%;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.failure-image {
+  width: 20%;
+}
+.popular-failure-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+.popular-loader-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+.popular-failure-para {
+  font-size: 16px;
+  color: #ffffff;
+}

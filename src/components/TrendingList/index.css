@@ -1,0 +1,29 @@
+.trending-loader-container {
+  width: 100%;
+  margin: auto;
+  background-color: #000000;
+  height: 100px;
+  margin-top: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trending-failure-container {
+  width: 100%;
+  margin: auto;
+  background-color: #000000;
+  height: 100px;
+  margin-top: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 10px;
+}
